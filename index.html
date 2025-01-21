@@ -1,0 +1,53 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sorteador de Números</title>
+		<!-- <link rel="stylesheet" href="styles.css" /> -->
+	</head>
+	<body>
+		<div class="container">
+			<h1>Number Sorter</h1>
+			<p>Online - Free</p>
+
+			<form>
+				<label for="quantity">Quantity of Numbers:</label>
+				<input type="number" id="quantity" name="quantity" value="" />
+
+				<label for="minimum">From:</label>
+				<input type="number" id="minimum" name="minimum" value="" />
+
+				<label for="maximum">To:</label>
+				<input type="number" id="maximum" name="maximum" value="" />
+
+				<label for="no-repeat"><input type="checkbox" id="no-repeat" name="no-repeat" /> Do not repeat numbers</label>
+
+				<button type="submit">Sort →</button>
+			</form>
+
+			<p>
+				<strong>How does the number sorter work?</strong><br />
+				The sorter uses a random generation algorithm to create numbers within the range specified by the user.
+			</p>
+
+			<p>
+				<strong>Can I choose the range of numbers?</strong><br />
+				Yes, you can set the minimum and maximum values for the range of sorted numbers.
+			</p>
+		</div>
+
+		<div>
+			<h2>Sorted Numbers</h2>
+			<ul id="sorted-numbers">
+				<!-- <li>1</li>
+				<li>2</li>
+				<li>3</li> -->
+			</ul>
+		</div>
+
+		<script src="scripts.js"></script>
+	</body>
+</html>
