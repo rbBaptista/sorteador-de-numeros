@@ -1,0 +1,108 @@
+/** @format */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* Colors */
+	--content-primary: #ffffff;
+	--content-secondary: #c7c9cc;
+	--content-tertiary: #d9d9d9;
+	--content-brand: #c58de7;
+	--color-inverse: #030203;
+
+	--background-primary: #020202;
+	--background-secondary: #111012;
+	--background-tertiary: #24222e;
+	--background-brand: #c58de7;
+	--background-gray: #3d3d3d;
+
+	--accent-pink: #d586e0;
+	--accent-blue: #91a1fa;
+	--accent-green: #77c0aa;
+	--accent-lime: #d1dc97;
+	--accent-red: #e9a9b3;
+
+	--gradient-border: #77c0af 0%, #d1dc97 14.84%, #e9a9b3 32.15%, #d586e0 65.79%, #91a1fa 84.58%;
+	--gradient-background: #d586e0 0%, #91a1fa 98.93%;
+	--gradient-content-start: #c7c9cc;
+	--gradient-content-end: #3d3d3d;
+
+	/* Fonts */
+	--font-sora: "Sora", sans-serif;
+	--font-roboto-mono: "Roboto Mono", sans-serif;
+	--font-roboto-flex: "Roboto Flex", sans-serif;
+
+	--display-large: normal 800 72px/1.3 var(--font-sora);
+	--display-medium: 800 40px/1.3 var(--font-sora);
+	--display-small: 700 32px/1.3 var(--font-sora);
+
+	--overline: 700 16px/1.5 var(--font-roboto-mono);
+
+	--paragraph-large: 500 16px/1.5 var(--font-roboto-flex);
+	--paragraph-medium: 500 14px/1.5 var(--font-roboto-flex);
+	--paragraph-small: 500 12px/1.5 var(--font-roboto-flex);
+	--label-medium: 700 20px/1.5 var(--font-roboto-flex);
+	--label-small: 700 16px/1.5 var(--font-roboto-flex);
+}
+
+body {
+	width: 1366px;
+	height: 768px;
+	background-image: url("/assets/img/bg.png");
+	background-color: var(--background-primary);
+	/* position: relative; */
+}
+
+main {
+	width: 508px;
+
+	& h1 {
+		font: var(--display-large);
+		color: var(--content-primary);
+		text-transform: uppercase;
+	}
+
+	& h2 {
+		font: var(--overline);
+		background: linear-gradient(var(--gradient-content-start), var(--gradient-content-end));
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		text-transform: uppercase;
+	}
+
+	& p {
+		font: var(--paragraph-medium);
+		color: var(--content-secondary);
+
+		& strong {
+			font: var(--paragraph-small);
+			color: var(--content-brand);
+		}
+	}
+}
+
+form {
+	width: 590px;
+}
+
+#logo {
+	position: absolute;
+	top: 76px;
+	left: 130px;
+}
+
+.flex-questions {
+	display: flex;
+	width: 400px;
+	gap: 16px;
+	align-items: flex-start;
+}
+
+.none {
+	display: none;
+}
