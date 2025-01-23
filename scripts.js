@@ -6,6 +6,8 @@ const minimum = document.getElementById("minimum");
 const maximum = document.getElementById("maximum");
 const noRepeat = document.getElementById("no-repeat");
 const ul = document.getElementById("sorted-numbers");
+const results = document.getElementById("results");
+const sortAgainButton = document.getElementById("sort-again");
 
 let result = 0;
 let sorteio = 0;
@@ -18,10 +20,21 @@ form.addEventListener("submit", (e) => {
 	// clear the list and the set
 	sortedNumbers.clear();
 	ul.innerHTML = "";
-	for (let i = 0; i < quantity.value; i++) {
-		drawNumber();
-		addListItem();
+
+	const totalNumbers = parseInt(quantity.value);
+	let delay = 0;
+
+	for (let i = 0; i < totalNumbers; i++) {
+		setTimeout(() => {
+			drawNumber();
+			addListItem();
+		}, delay);
+		delay += 500; // 0.5 seconds delay
 	}
+
+	// hide the form and show the results
+	form.style.display = "none";
+	results.style.display = "block";
 });
 
 // draw a number between the minimum and maximum values
@@ -42,3 +55,10 @@ function addListItem() {
 	li.textContent = sorteio;
 	ul.appendChild(li);
 }
+
+// listen to the sort again button click event
+sortAgainButton.addEventListener("click", () => {
+	// show the form and hide the results
+	form.style.display = "block";
+	results.style.display = "none";
+});

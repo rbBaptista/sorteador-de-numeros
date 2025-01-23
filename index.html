@@ -21,7 +21,7 @@
 				<h2>Online - Free</h2>
 				<h1>Number Sorter</h1>
 
-				<div class="flex-questions">
+				<div class="questions">
 					<img src="assets/icons/Frame-2.svg" alt="" />
 					<p>
 						<strong>How does the number sorter work?</strong><br />
@@ -29,7 +29,7 @@
 					</p>
 				</div>
 
-				<div class="flex-questions">
+				<div class="questions">
 					<img src="assets/icons/Frame-2.svg" alt="" />
 					<p>
 						<strong>Can I choose the range of numbers?</strong><br />
@@ -37,20 +37,38 @@
 					</p>
 				</div>
 			</main>
-			<form>
-				<label for="quantity">Quantity of Numbers:</label>
-				<input type="number" id="quantity" name="quantity" value="" />
-
-				<label for="minimum">From:</label>
-				<input type="number" id="minimum" name="minimum" value="" />
-
-				<label for="maximum">To:</label>
-				<input type="number" id="maximum" name="maximum" value="" />
-
-				<label for="no-repeat"><input type="checkbox" id="no-repeat" name="no-repeat" /> Do not repeat numbers</label>
+			<form id="number-form">
+				<h3>Quero sortear:</h3>
+				<p>
+					Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e
+					fácil!
+				</p>
+				<fieldset>
+					<div class="input-numbers">
+						<label for="quantity">Quantity</label>
+						<input type="text" id="quantity" name="quantity" value="2" />
+					</div>
+					<div class="input-numbers">
+						<label for="minimum">From</label>
+						<input type="text" id="minimum" name="minimum" value="1" />
+					</div>
+					<div class="input-numbers">
+						<label for="maximum">To</label>
+						<input type="text" id="maximum" name="maximum" value="100" />
+					</div>
+				</fieldset>
+				<div class="no-repeat-checkbox">
+					<input type="checkbox" id="no-repeat" name="no-repeat" />
+					<label for="no-repeat">Do not repeat numbers</label>
+				</div>
 
 				<button type="submit">Sort →</button>
 			</form>
+			<div id="results" style="display: none">
+				<h3>Sorted Numbers:</h3>
+				<ul id="sorted-numbers"></ul>
+				<button id="sort-again">Sort Again</button>
+			</div>
 		</div>
 
 		<script src="scripts.js"></script>

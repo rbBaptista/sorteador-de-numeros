@@ -57,50 +57,10 @@ body {
 	/* position: relative; */
 }
 
-main {
-	width: 508px;
-
-	& h1 {
-		font: var(--display-large);
-		color: var(--content-primary);
-		text-transform: uppercase;
-	}
-
-	& h2 {
-		font: var(--overline);
-		background: linear-gradient(var(--gradient-content-start), var(--gradient-content-end));
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		text-transform: uppercase;
-	}
-
-	& p {
-		font: var(--paragraph-medium);
-		color: var(--content-secondary);
-
-		& strong {
-			font: var(--paragraph-small);
-			color: var(--content-brand);
-		}
-	}
-}
-
-form {
-	width: 590px;
-}
-
 #logo {
 	position: absolute;
 	top: 76px;
 	left: 130px;
-}
-
-.flex-questions {
-	display: flex;
-	width: 400px;
-	gap: 16px;
-	align-items: flex-start;
 }
 
 .none {
